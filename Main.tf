@@ -1,6 +1,6 @@
     provider "aws" {
-        access_key = "AKIAT"
-        secret_key = "4JLRgmQQcKMjo98YehaPV5hjtO"
+        access_key = "AKIATE3764"
+        secret_key = "4JLRgmLcKMjo98YehaPV5hjtO"
         region = "us-east-1"
     }
 
@@ -18,3 +18,14 @@
             Name = "Terraform_WebServer"
         }
     }
+
+    resource "aws_security_group" "test" {
+        name = "b29demotest"
+        ingress {
+            from_port = 8080
+            to_port = 8080
+            protocol = "tcp"
+            cidr_blocks = [ "0.0.0.0/0" ]
+        }
+    } 
+completed accessing webser how to post in linkedin
